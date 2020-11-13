@@ -1,4 +1,9 @@
 body {
   margin: 0;
-  font-family: helvetica;
+  font-family: "Montserrat", sans-serif;
+}
+
+:root {
+  --link-color: #5790eb;
+  --btn-color: #f0c040;
 }
