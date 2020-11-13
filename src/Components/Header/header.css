@@ -1,0 +1,14 @@
+.header-banner {
+  background-color: #203040;
+  padding: 2rem;
+}
+
+.header-banner a {
+  color: #ffffff;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+a:hover {
+  color: #ff8000;
+}

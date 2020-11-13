@@ -1,0 +1,8 @@
+.footer-banner {
+  padding: 1rem;
+  background-color: #203040;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
