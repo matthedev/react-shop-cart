@@ -3,6 +3,17 @@ import "./cardinfo.css";
 import { GrClose } from "react-icons/gr";
 
 const CardInfo = ({ product, turnOff, show }) => {
+  const addToCart = (item) => {
+    const existingItems = localStorage.getItem("cartItems");
+    let updatedItems;
+    if (existingItems) {
+      updatedItems = existingItems + "," + item;
+    } else {
+      updatedItems = item;
+    }
+    localStorage.setItem("cartItems", updatedItems);
+  };
+
   return (
     <div className={show ? "card-info show" : "card-info"}>
       <span className="close-icon">
@@ -31,7 +42,12 @@ const CardInfo = ({ product, turnOff, show }) => {
               <span>
                 {"$" + Number(product.price.toFixed(1)).toLocaleString()}
               </span>
-              <button className="primaryBtn">Add to Cart</button>
+              <button
+                className="primaryBtn"
+                onClick={() => addToCart(product.title)}
+              >
+                Add to Cart
+              </button>
             </div>
           </div>{" "}
         </>
