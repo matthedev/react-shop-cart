@@ -1,42 +1,59 @@
-import React, { useEffect } from 'react';
-import data from "../../data.json"
-import "./main.css"
+import React, { useState } from "react";
+import "./main.css";
+import CardInfo from "../cardInfo/CardInfo";
 
-// const Content = () => {
-//     const [products, setProducts] = useState(data.products)
-//     const [size, setSize] = useState("")
-//     const [sort, setSort] = useState("")
-//   }
+const Main = ({ products, cardInfo }) => {
+  const [showCard, setShowCard] = useState(false);
+  const [selectCard, setSelectCard] = useState(null);
 
-const Main = () => {
+  const clickCardHandler = (product) => {
+    setSelectCard(product);
+    setShowCard(true);
+  };
 
-  
-    return (
-        <div className="content">
-            <div className="main">
-               {data.products.map((product) => {
-                   return <div key={product._id}>
-                       <div className="product">
-                           <div className="background-img-wrapper">
+  const turnOffCard = (product) => {
+    setShowCard(false);
+  };
 
-                           <div className="background-img"  style={{
-                                            backgroundImage: `url(${product.image})`
-                                        }} ></div>
-                           </div>
-                           {/* <img src={product.image} alt={product.title}/> */}
-                                 <a href="/">{product.title}</a>
-                                 <div className="product-detail">
-                                    <div className="product-price">{"$" + Number(product.price.toFixed(1)).toLocaleString()}</div>
-                                    <button className="primaryBtn">Add to Cart</button>
-                                 </div>
-                             
-                       </div>
-                   </div>
-               })}
+  return (
+    <div className="content">
+      <div className="main">
+        {products.map((product) => {
+          return (
+            <div key={product._id} className="parent-container">
+              <div
+                className="product"
+                onClick={() => clickCardHandler(product)}
+              >
+                <div className="background-img-wrapper">
+                  <div
+                    className="background-img"
+                    style={{
+                      backgroundImage: `url(${product.image})`,
+                    }}
+                  ></div>
+                </div>
+                <div className="pride-detail-a">
+                  <a href="/">{product.title}</a>
+                  <div className="product-detail">
+                    <div className="product-price">
+                      {"$" + Number(product.price.toFixed(1)).toLocaleString()}
+                    </div>
+                    <button className="primaryBtn">Add to Cart</button>
+                  </div>
+                </div>
+              </div>
             </div>
-            <div className="sidebar">Cart Items</div>
-        </div>
-    );
+          );
+        })}
+      </div>
+      <div className="sidebar">Cart Items</div>
+      <CardInfo product={selectCard} turnOff={turnOffCard} show={showCard} />
+      {showCard && (
+        <div className="backdrop" onClick={() => setShowCard(false)}></div>
+      )}
+    </div>
+  );
 };
 
 export default Main;
