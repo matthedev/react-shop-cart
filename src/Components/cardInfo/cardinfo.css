@@ -40,6 +40,7 @@
 
 .product-image {
   width: 48%;
+  overflow: hidden;
 }
 
 .product-image img {
@@ -83,6 +84,10 @@
   padding: 2px 8px;
   cursor: pointer;
   border: 0.5px solid transparent;
+}
+
+.size-btn-active {
+  border-color: tomato;
 }
 
 .size-btn:hover {

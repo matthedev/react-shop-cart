@@ -1,0 +1,40 @@
+.ui-main {
+  min-height: calc(100vh - 132px);
+  padding: 0 20px;
+}
+
+.UI-container {
+  display: flex;
+  margin: 0 auto;
+  border-bottom: 1px solid #a9a9a9;
+  margin-top: 30px;
+  min-width: 350px;
+  width: 50%;
+}
+
+.ui-title {
+  padding-top: 20px;
+  font-size: 25px;
+  color: #34568b;
+}
+
+.ui-img img {
+  height: 320px;
+  padding: 20px;
+}
+
+.remove-btn {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  margin-left: auto;
+  font-size: 20px;
+  cursor: pointer;
+  padding: 20px;
+  height: 22px;
+  margin-top: auto;
+}
+
+.dollarSign {
+  color: #85bb65;
+}
