@@ -38,3 +38,8 @@
 .dollarSign {
   color: #85bb65;
 }
+
+.Total-price {
+  display: flex;
+  justify-content: flex-end;
+}

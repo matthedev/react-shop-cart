@@ -1,33 +1,53 @@
 import React, { useState, useEffect } from "react";
+import { Elements } from "@stripe/react-stripe-js";
+import { loadStripe } from "@stripe/stripe-js";
+import CheckoutForm from "./CheckoutForm";
 import { FaTrash } from "react-icons/fa";
 import "./Orders.css";
 
+const stripePromise = loadStripe(
+  "pk_test_51HuduDFEzHGjSQ0ZIGRH1xv5R3YLhoucZWpzzM1l9RWss0AZd2oRraPF1X07Oxjv3sLHGbS59f6mY3qiYXPDXfqi003P4Pn9IZ"
+);
+
 const Orders = () => {
   const [items, setItems] = useState([]);
+  const [totalPrice, setTotalPrice] = useState(0);
   useEffect(() => {
     const stringToArrayHolder = localStorage.getItem("cartItems").split(",");
     setItems(stringToArrayHolder);
   }, []);
+
+  useEffect(() => {
+    items.map((item) => {
+      const updatedItem = item.split(":");
+      return setTotalPrice(
+        (prevState) => Number(prevState) + Number(updatedItem[1])
+      );
+    });
+  }, [items]);
 
   const removeItemHandler = (index) => {
     const updatedItems = [...items];
     updatedItems.splice(index, 1);
     setItems(updatedItems);
     localStorage.setItem("cartItems", updatedItems);
+    setTotalPrice(0);
   };
 
   return (
     <div className="ui-main">
       {items.map((item, index) => {
         const updatedItem = item.split(":");
+        console.log(updatedItem[1]);
+
         return (
           <div key={index} className="UI-container">
             <div className="ui-img">
-              <img src={updatedItem[1]} alt="img" />
+              <img src={updatedItem[2]} alt="img" />
             </div>
             <div className="ui-title">
               {updatedItem[0].replaceAll("-", " ")}{" "}
-              <span className="dollarSign">&#36;</span>
+              <span className="dollarSign">{updatedItem[1]} &#36;</span>
             </div>
             <div
               className="remove-btn"
@@ -38,14 +58,13 @@ const Orders = () => {
           </div>
         );
       })}
+      <span className="Total-price">
+        Total Price: <span className="dollarSign">{totalPrice} &#36;</span>
+      </span>
+      <Elements stripe={stripePromise}>
+        <CheckoutForm />
+      </Elements>
     </div>
-    // <div>
-    //   <img
-    //     src="https://imgix.bustle.com/uploads/getty/2020/3/12/5aa737ee-d142-476f-b3d8-e863e2b56648-getty-688398000.jpg?w=1200&h=630&q=70&fit=crop&crop=faces&fm=jpg"
-    //     alt="image"
-    //   />
-    //   <span>zdcharova</span>
-    // </div>
   );
 };
 
