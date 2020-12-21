@@ -1,6 +1,9 @@
 .header-banner {
-  background-color: #203040;
+  display: flex;
+  background-color: var(--header-color);
   padding: 2rem;
+  height: 0.8rem;
+  justify-content: space-between;
 }
 
 .header-banner a {
@@ -11,4 +14,18 @@
 
 a:hover {
   color: #ff8000;
+}
+
+.header-cart {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.logo-link {
+  font-size: 1.2em;
+  font-style: italic;
+  text-transform: uppercase;
+}
+.shop-link {
+  margin-right: 60px;
 }

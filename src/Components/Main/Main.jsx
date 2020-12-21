@@ -47,7 +47,6 @@ const Main = ({ products, cardInfo }) => {
           );
         })}
       </div>
-      <div className="sidebar">Cart Items</div>
       <CardInfo product={selectCard} turnOff={turnOffCard} show={showCard} />
       {showCard && (
         <div className="backdrop" onClick={() => setShowCard(false)}></div>

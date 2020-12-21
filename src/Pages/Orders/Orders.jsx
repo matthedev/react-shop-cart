@@ -9,11 +9,15 @@ const stripePromise = loadStripe(
   "pk_test_51HuduDFEzHGjSQ0ZIGRH1xv5R3YLhoucZWpzzM1l9RWss0AZd2oRraPF1X07Oxjv3sLHGbS59f6mY3qiYXPDXfqi003P4Pn9IZ"
 );
 
-const Orders = () => {
+const Orders = ({ history }) => {
   const [items, setItems] = useState([]);
   const [totalPrice, setTotalPrice] = useState(0);
+  if (!localStorage.getItem("cartItems")) {
+    history.push("/");
+  }
   useEffect(() => {
-    const stringToArrayHolder = localStorage.getItem("cartItems").split(",");
+    const cockpit = localStorage.getItem("cartItems");
+    const stringToArrayHolder = cockpit.split(",");
     setItems(stringToArrayHolder);
   }, []);
 
@@ -62,7 +66,7 @@ const Orders = () => {
         Total Price: <span className="dollarSign">{totalPrice} &#36;</span>
       </span>
       <Elements stripe={stripePromise}>
-        <CheckoutForm />
+        <CheckoutForm TotalAmount={totalPrice} />
       </Elements>
     </div>
   );
