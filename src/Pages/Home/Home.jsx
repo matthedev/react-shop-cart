@@ -16,7 +16,6 @@ const Home = ({ history }) => {
       </div>
       <div className="content-pic-parent">
         <div className="content-big-pic"></div>
-        <div className="content-small-one"></div>
       </div>
     </div>
   );
