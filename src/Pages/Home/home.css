@@ -16,14 +16,14 @@
   height: 100%;
 }
 
-.content-big-pic {
+/* .content-big-pic {
   height: 100%;
   width: 100%;
   background-image: url("../../Assets/mainlight.jpg");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-}
+} */
 
 /* .content-small-one {
   background-color: blue;

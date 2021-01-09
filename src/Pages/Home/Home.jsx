@@ -1,4 +1,5 @@
 import React from "react";
+import Carousel from "../../Components/Carousel/Carousel";
 import "./home.css";
 
 const Home = ({ history }) => {
@@ -15,7 +16,8 @@ const Home = ({ history }) => {
         </div>
       </div>
       <div className="content-pic-parent">
-        <div className="content-big-pic"></div>
+        {/* <div className="content-big-pic"></div> */}
+        <Carousel />
       </div>
     </div>
   );
