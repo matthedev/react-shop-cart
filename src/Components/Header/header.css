@@ -16,8 +16,8 @@ a:hover {
   color: #ff8000;
 }
 
-.header-cart {
-  display: flex;
+.navigations {
+  margin-left: 1400px;
   justify-content: flex-end;
 }
 
@@ -28,4 +28,14 @@ a:hover {
 }
 .shop-link {
   margin-right: 60px;
+}
+
+.lighter {
+  font-size: 20px;
+  cursor: pointer;
+  color: aqua;
+}
+
+.lighter:hover {
+  color: #ff8000;
 }

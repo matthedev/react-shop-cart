@@ -1,16 +1,22 @@
 import React, { Component } from "react";
+import { connect } from "react-redux";
 import { Link } from "react-router-dom";
 import { FiShoppingCart } from "react-icons/fi";
+import { GoLightBulb } from "react-icons/go";
 import "./header.css";
 
 class Header extends Component {
+  constructor(props) {
+    super(props);
+  }
   render() {
+    console.log(this.props);
     return (
       <div className="header-banner">
         <Link to="/" className="logo-link">
           #alpha dressing
         </Link>
-        <nav>
+        <nav className="navigations">
           <Link to="/shop" className="shop-link">
             Shop
           </Link>
@@ -18,9 +24,16 @@ class Header extends Component {
             Cart <FiShoppingCart />
           </Link>
         </nav>
+        <div className="lighter" onClick={this.props.toggleDarkMode}>
+          <GoLightBulb />
+        </div>
       </div>
     );
   }
 }
 
-export default Header;
+const mapDispatchToProps = (dispatch) => ({
+  toggleDarkMode: () => dispatch({ type: "DARK_MODE_TOGGLE" }),
+});
+
+export default connect(null, mapDispatchToProps)(Header);

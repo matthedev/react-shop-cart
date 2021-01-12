@@ -3,6 +3,14 @@ body {
   font-family: "Montserrat", sans-serif;
 }
 
+.whiteMode {
+  --background-color: #dcdcdc;
+}
+
+.darkMode {
+  --background-color: #000;
+}
+
 :root {
   --link-color: #5790eb;
   --btn-color: #f0c040;

@@ -1,15 +1,21 @@
-import React from "react"
+import React, {useState} from "react"
 import {Route, Switch} from "react-router-dom"
 import Header from "./Components/Header/Header"
 import Home from "./Pages/Home/Home"
 import Shop from "./Pages/Main/Shop"
 import Footer from "./Components/Footer/Footer"
 import Orders from "./Pages/Orders/Orders"
+import {connect} from "react-redux"
 
-function App() {
+function App({darkmode}) {
+
+// const [lightmode, setLightmode] = useState(false)
+// const [darkmode, setDarkmode] = useState(false)
+
+
 
   return (
-    <div >
+    <div className={darkmode ? "darkMode" : "whiteMode"}>
      <Header />
      <Switch>
        <Route path="/" exact component={Home} />
@@ -21,4 +27,10 @@ function App() {
   );
 }
 
-export default App;
+const mapStateToProps = (state) => ({
+darkmode: state.toggler
+}) 
+
+
+
+export default connect(mapStateToProps)(App);
