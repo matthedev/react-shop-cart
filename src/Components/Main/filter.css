@@ -1,11 +1,19 @@
 .filter {
   display: flex;
   justify-content: space-between;
-  padding: 1rem;
-  margin: 1rem;
+  padding: 2rem;
   border-bottom: 0.1rem #c0c0c0 solid;
+  background-color: var(--background-color);
+  color: var(--text-color);
 }
 
 .filter div {
   flex: 1;
+}
+
+.selector {
+  background-color: var(--background-color);
+  color: var(--text-color);
+  padding: 5px;
+  border-radius: 3px;
 }

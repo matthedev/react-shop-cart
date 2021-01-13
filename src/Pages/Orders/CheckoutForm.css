@@ -170,7 +170,7 @@ button {
 }
 
 .ResultTitle {
-  color: #fff;
+  color: var(--text-color);
   font-weight: 500;
   margin-bottom: 8px;
   font-size: 17px;
@@ -178,7 +178,7 @@ button {
 }
 
 .ResultMessage {
-  color: #9cdbff;
+  color: var(--text-color);
   font-size: 14px;
   font-weight: 400;
   margin-bottom: 25px;

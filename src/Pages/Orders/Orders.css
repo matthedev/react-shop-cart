@@ -1,13 +1,15 @@
 .ui-main {
-  min-height: calc(100vh - 132px);
+  min-height: 100vh;
   padding: 0 20px;
+  background-color: var(--background-color);
+  color: var(--text-color);
 }
 
 .UI-container {
   display: flex;
   margin: 0 auto;
   border-bottom: 1px solid #a9a9a9;
-  margin-top: 30px;
+  padding-top: 30px;
   min-width: 350px;
   width: 50%;
 }
@@ -42,4 +44,26 @@
 .Total-price {
   display: flex;
   justify-content: flex-end;
+}
+
+.buybtn {
+  color: black;
+  margin: 0 auto;
+  background-color: var(--btn-color);
+  width: 100px;
+  height: 20px;
+  padding: 15px;
+  border-radius: 7px;
+  cursor: pointer;
+  text-align: center;
+}
+
+.checkHandler {
+  display: none;
+}
+
+.checkOutHandlerShow {
+  right: 50%;
+  margin-top: 20px;
+  display: block;
 }

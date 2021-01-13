@@ -38,6 +38,9 @@ const Orders = ({ history }) => {
     setTotalPrice(0);
   };
 
+  const [checkOutForm, setCheckOutForm] = useState(false);
+
+  console.log(checkOutForm);
   return (
     <div className="ui-main">
       {items.map((item, index) => {
@@ -65,9 +68,14 @@ const Orders = ({ history }) => {
       <span className="Total-price">
         Total Price: <span className="dollarSign">{totalPrice} &#36;</span>
       </span>
-      <Elements stripe={stripePromise}>
-        <CheckoutForm TotalAmount={totalPrice} />
-      </Elements>
+      <div className="buybtn" onClick={() => setCheckOutForm(true)}>
+        Purchase
+      </div>
+      <div className={checkOutForm ? "checkOutHandlerShow" : "checkHandler"}>
+        <Elements stripe={stripePromise}>
+          <CheckoutForm TotalAmount={totalPrice} />
+        </Elements>
+      </div>
     </div>
   );
 };

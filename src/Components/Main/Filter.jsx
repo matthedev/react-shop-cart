@@ -6,7 +6,10 @@ const Filter = ({ sizeChange, orderChange }) => {
     <div className="filter">
       <div className="filter-sort">
         Order{" "}
-        <select onChange={(e) => orderChange(e.target.value)}>
+        <select
+          onChange={(e) => orderChange(e.target.value)}
+          className="selector"
+        >
           <option value="">Latest</option>
           <option value="Lowest">Lowest</option>
           <option value="Highest">Highest</option>
@@ -14,7 +17,10 @@ const Filter = ({ sizeChange, orderChange }) => {
       </div>
       <div className="filter-size">
         Filter{" "}
-        <select onChange={(e) => sizeChange(e.target.value)}>
+        <select
+          onChange={(e) => sizeChange(e.target.value)}
+          className="selector"
+        >
           <option value="ALL">ALL</option>
           <option value="XS">XS</option>
           <option value="S">S</option>

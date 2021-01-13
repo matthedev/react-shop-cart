@@ -33,7 +33,7 @@ a:hover {
 .lighter {
   font-size: 20px;
   cursor: pointer;
-  color: aqua;
+  color: var(--switch-color);
 }
 
 .lighter:hover {

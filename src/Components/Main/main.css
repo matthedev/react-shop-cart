@@ -1,5 +1,6 @@
 .content {
   padding: 1rem;
+  background-color: var(--background-color);
 }
 
 .product {
