@@ -9,16 +9,11 @@ import {connect} from "react-redux"
 
 function App({darkmode}) {
 
-// const [lightmode, setLightmode] = useState(false)
-// const [darkmode, setDarkmode] = useState(false)
-
-
-
   return (
     <div className={darkmode ? "darkMode" : "whiteMode"}>
      <Header />
      <Switch>
-       <Route path="/" exact component={Home} />
+       <Route path="/react-shop-cart" exact component={Home} />
        <Route path="/shop" exact component={Shop}/>
         <Route path="/orders" exact component={Orders}/>
        </Switch>
