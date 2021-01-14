@@ -9,7 +9,7 @@ const CardInfo = ({ product, turnOff, show, history }) => {
   const addToCart = (item) => {
     const existingItems = localStorage.getItem("cartItems");
     const updatedItem =
-      item + "-" + chosenSize + ":" + product.price + ":" + product.image;
+      item + "-" + chosenSize + ";" + product.price + ";" + product.image;
     let updatedItems;
     if (existingItems) {
       updatedItems = existingItems + "," + updatedItem;

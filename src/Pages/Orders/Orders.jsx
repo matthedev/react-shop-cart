@@ -13,7 +13,7 @@ const Orders = ({ history }) => {
   const [items, setItems] = useState([]);
   const [totalPrice, setTotalPrice] = useState(0);
   if (!localStorage.getItem("cartItems")) {
-    history.push("/");
+    history.push("/react-shop-cart");
   }
   useEffect(() => {
     const cockpit = localStorage.getItem("cartItems");
@@ -23,7 +23,7 @@ const Orders = ({ history }) => {
 
   useEffect(() => {
     items.map((item) => {
-      const updatedItem = item.split(":");
+      const updatedItem = item.split(";");
       return setTotalPrice(
         (prevState) => Number(prevState) + Number(updatedItem[1])
       );
@@ -44,13 +44,13 @@ const Orders = ({ history }) => {
   return (
     <div className="ui-main">
       {items.map((item, index) => {
-        const updatedItem = item.split(":");
-        console.log(updatedItem[1]);
+        const updatedItem = item.split(";");
+        console.log(updatedItem[2]);
 
         return (
           <div key={index} className="UI-container">
             <div className="ui-img">
-              <img src={updatedItem[2]} alt="img" />
+              <img src={`${updatedItem[2]}`} alt="img" />
             </div>
             <div className="ui-title">
               {updatedItem[0].replaceAll("-", " ")}{" "}
