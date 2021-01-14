@@ -16,7 +16,6 @@ const Home = ({ history }) => {
         </div>
       </div>
       <div className="content-pic-parent">
-        {/* <div className="content-big-pic"></div> */}
         <Carousel />
       </div>
     </div>

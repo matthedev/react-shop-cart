@@ -40,12 +40,10 @@ const Orders = ({ history }) => {
 
   const [checkOutForm, setCheckOutForm] = useState(false);
 
-  console.log(checkOutForm);
   return (
     <div className="ui-main">
       {items.map((item, index) => {
         const updatedItem = item.split(";");
-        console.log(updatedItem[2]);
 
         return (
           <div key={index} className="UI-container">

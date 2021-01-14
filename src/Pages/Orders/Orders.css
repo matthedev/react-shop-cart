@@ -69,6 +69,9 @@
 }
 
 @media screen and (max-width: 700px) {
+  .ui-main {
+    overflow-x: hidden;
+  }
   .ui-title {
     font-size: 17px;
   }

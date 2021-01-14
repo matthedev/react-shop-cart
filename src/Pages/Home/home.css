@@ -2,7 +2,6 @@
   display: flex;
   width: 100%;
   height: 100vh;
-  /* background-color: #dcdcdc; */
   background-color: var(--background-color);
 }
 
@@ -21,26 +20,6 @@
 .content-pic-parent img {
   width: 100% !important;
 }
-
-/* .content-big-pic {
-  height: 100%;
-  width: 100%;
-  background-image: url("../../Assets/mainlight.jpg");
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-} */
-
-/* .content-small-one {
-  background-color: blue;
-  height: 40%;
-  width: 50%;
-  margin-top: -45px;
-  margin-left: -60px;
-  background-image: url("../../Assets/pic2.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
-} */
 
 .content-text h1 {
   padding-top: 8rem;
@@ -82,6 +61,7 @@
 
   .content-root {
     justify-content: center;
+    overflow: hidden;
   }
 
   .content-text {

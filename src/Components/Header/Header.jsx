@@ -10,7 +10,6 @@ class Header extends Component {
     super(props);
   }
   render() {
-    console.log(this.props);
     return (
       <div className="header-banner">
         <Link to="/react-shop-cart" className="logo-link">
