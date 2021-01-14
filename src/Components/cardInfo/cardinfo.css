@@ -107,3 +107,28 @@
   font-size: 20px;
   cursor: pointer;
 }
+
+@media screen and (max-width: 599px) {
+  .card-info {
+    width: 80%;
+    height: 80%;
+  }
+
+  .product-desc {
+    font-size: 0.8em;
+    padding: 5px;
+    line-height: 20px;
+  }
+  .size-btn {
+    font-size: 0.7em;
+  }
+  .product-price span {
+    font-size: 18px;
+    margin-right: 5px;
+  }
+
+  .product-content h1 {
+    margin-top: 0;
+    font-size: 1.1em;
+  }
+}

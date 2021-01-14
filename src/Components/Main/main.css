@@ -4,6 +4,7 @@
 }
 
 .product {
+  width: 50%;
   height: 500px;
   border-radius: 5px;
   overflow: hidden;
@@ -96,4 +97,14 @@
   height: 100vh;
   background-color: rgba(0, 0, 0, 0.7);
   position: fixed;
+}
+
+@media screen and (max-width: 550px) {
+  .parent-container {
+    width: 250px !important;
+  }
+
+  .main {
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  }
 }

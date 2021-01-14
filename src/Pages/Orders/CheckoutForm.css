@@ -191,3 +191,9 @@ button {
   cursor: pointer;
   background: transparent;
 }
+
+@media screen and (max-width: 700px) {
+  .Form {
+    padding-bottom: 20px;
+  }
+}

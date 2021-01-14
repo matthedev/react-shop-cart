@@ -67,3 +67,19 @@
   margin-top: 20px;
   display: block;
 }
+
+@media screen and (max-width: 700px) {
+  .ui-title {
+    font-size: 17px;
+  }
+
+  .ui-img img {
+    width: 200px;
+  }
+
+  .Total-price {
+    padding: 10px 0;
+    display: block;
+    text-align: center;
+  }
+}

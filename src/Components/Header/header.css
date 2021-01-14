@@ -17,17 +17,18 @@ a:hover {
 }
 
 .navigations {
-  margin-left: 1400px;
-  justify-content: flex-end;
+  display: flex;
+  width: 250px;
+  justify-content: space-between;
 }
 
 .logo-link {
+  display: flex;
+  align-items: center;
   font-size: 1.2em;
   font-style: italic;
   text-transform: uppercase;
-}
-.shop-link {
-  margin-right: 60px;
+  height: 100%;
 }
 
 .lighter {
@@ -38,4 +39,15 @@ a:hover {
 
 .lighter:hover {
   color: #ff8000;
+}
+
+@media screen and (max-width: 450px) {
+  .logo-link {
+    font-size: 1em;
+  }
+
+  .navigations {
+    width: 170px;
+    font-size: 0.9em;
+  }
 }

@@ -23,10 +23,10 @@ class Header extends Component {
           <Link to="/orders">
             Cart <FiShoppingCart />
           </Link>
+          <div className="lighter" onClick={this.props.toggleDarkMode}>
+            <GoLightBulb />
+          </div>
         </nav>
-        <div className="lighter" onClick={this.props.toggleDarkMode}>
-          <GoLightBulb />
-        </div>
       </div>
     );
   }
