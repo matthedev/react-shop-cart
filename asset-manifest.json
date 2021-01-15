@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/react-shop-cart/static/css/main.217f9f7b.chunk.css",
+    "main.css": "/react-shop-cart/static/css/main.a11f5fde.chunk.css",
     "main.js": "/react-shop-cart/static/js/main.0c3ec19b.chunk.js",
     "main.js.map": "/react-shop-cart/static/js/main.0c3ec19b.chunk.js.map",
     "runtime-main.js": "/react-shop-cart/static/js/runtime-main.f2f6426d.js",
@@ -12,7 +12,7 @@
     "static/js/3.b9336bdc.chunk.js.map": "/react-shop-cart/static/js/3.b9336bdc.chunk.js.map",
     "index.html": "/react-shop-cart/index.html",
     "static/css/2.1ace57cd.chunk.css.map": "/react-shop-cart/static/css/2.1ace57cd.chunk.css.map",
-    "static/css/main.217f9f7b.chunk.css.map": "/react-shop-cart/static/css/main.217f9f7b.chunk.css.map",
+    "static/css/main.a11f5fde.chunk.css.map": "/react-shop-cart/static/css/main.a11f5fde.chunk.css.map",
     "static/js/2.3a3c0cde.chunk.js.LICENSE.txt": "/react-shop-cart/static/js/2.3a3c0cde.chunk.js.LICENSE.txt",
     "static/media/gogo1.a792d803.png": "/react-shop-cart/static/media/gogo1.a792d803.png",
     "static/media/gogo2.ae24e3a2.png": "/react-shop-cart/static/media/gogo2.ae24e3a2.png",
@@ -23,7 +23,7 @@
     "static/js/runtime-main.f2f6426d.js",
     "static/css/2.1ace57cd.chunk.css",
     "static/js/2.3a3c0cde.chunk.js",
-    "static/css/main.217f9f7b.chunk.css",
+    "static/css/main.a11f5fde.chunk.css",
     "static/js/main.0c3ec19b.chunk.js"
   ]
 }
