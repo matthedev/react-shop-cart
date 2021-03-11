@@ -13,7 +13,7 @@ class Header extends Component {
     return (
       <div className="header-banner">
         <Link to="/react-shop-cart" className="logo-link">
-          #alpha dressing
+          #reactive
         </Link>
         <nav className="navigations">
           <Link to="/shop" className="shop-link">
