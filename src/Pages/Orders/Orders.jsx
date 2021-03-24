@@ -74,6 +74,12 @@ const Orders = ({ history }) => {
           <CheckoutForm TotalAmount={totalPrice} />
         </Elements>
       </div>
+      <div className="instructions">
+        <span>
+          *Please use the following test credit card for peyments* <br />
+          4242 4242 4242 4242 - Exp: 05/25 - CVV: 123
+        </span>
+      </div>
     </div>
   );
 };

@@ -87,3 +87,9 @@
     text-align: center;
   }
 }
+
+.instructions {
+  color: red;
+  margin: 20px;
+  text-align: center;
+}
